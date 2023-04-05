@@ -1,0 +1,13 @@
+# hello:
+#   path: /salut/{nom}
+#   controller: App\Controller\HelloController::sayHello
+#   defaults:
+#     nom: Anonyme
+
+
+# age:
+#   path: /calculage/{annee<\d{4}>?2000}
+#   controller: App\Controller\HelloController::getAge
+#   methods: [POST, GET]
+#   schemes: [HTTP]
+#   host: localhost
