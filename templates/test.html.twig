@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{# Commentaire #}
+{% block body %}
+<h1>Bonjour</h1>
+
+Votre nom : {{ nom | escape }} <br>
+
+Votre téléphone : {{ tel }}<br>
+
+{% for i in 0.. nombres|length -1 %}
+    {{ nombres[i] }}<br>
+{% endfor %}
+
+<p>
+{{ 22120.32 | format_prix("$") }}
+</p>
+<p>
+{{ 22120.32 | format_prix("DNT") }}
+</p>
+<p>
+{{ format_prix(22120.32, "Euro") }}
+</p>
+
+<p>
+    <a href="{{ url("app_produit", {"categorie": "ordinateurs"}) }}">Liste des ordinateurs</a>
+</p>
+{% endblock %}

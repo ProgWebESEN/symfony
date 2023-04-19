@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>{{ titre }}</h1>
+<p>Nombre de produits : {{ nombre }}</p>
+<ul>
+    {% for p in produits %}
+        <li>{{ p }}</li>
+    {% else %}
+        <p>Aucun produit trouvé</p>
+    {% endfor %}
+
+    {{ " salut à tous " | trim | upper}}
+
+</ul>
+
+<p>
+    <a href="{{ url("test") }}">Page bonjour</a>
+</p>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ asset("style.css") }}">
+{% endblock %}
+
+{% block titre %}
+Liste des produits
+{% endblock %}
